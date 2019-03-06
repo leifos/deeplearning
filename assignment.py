@@ -2,25 +2,25 @@ import os
 import argparse
 
 
-def network_one(learning_rate, iterations, batches):
+def network_one(learning_rate, epochs, batches):
 
-    print("Combination One with learning rate: {} iterations: {} and batch size: {}".format(learning_rate,iterations,batches))
-
-
-def network_two(learning_rate, iterations, batches):
-
-    print("Combination Two with learning rate: {} iterations: {} and batch size: {}".format(learning_rate,iterations,batches))
+    print("Combination One with learning rate: {} epochs: {} and batch size: {}".format(learning_rate, epochs, batches))
 
 
-def main(combination, learning_rate, iterations, batches, seed):
+def network_two(learning_rate, epochs, batches):
+
+    print("Combination Two with learning rate: {} epochs: {} and batch size: {}".format(learning_rate, epochs, batches))
+
+
+def main(combination, learning_rate, epochs, batches, seed):
 
     # Set Seed
     print("Seed: {}".format(seed))
 
     if int(combination)==1:
-        network_one(learning_rate,iterations, batches)
+        network_one(learning_rate, epochs, batches)
     if int(combination)==2:
-        network_two(learning_rate, iterations, batches)
+        network_two(learning_rate, epochs, batches)
 
     print("Done!")
 
@@ -47,8 +47,8 @@ if __name__ == "__main__":
 
     combination = check_param_is_numeric("combination", args.combination)
     learning_rate = check_param_is_numeric("learning_rate", args.learning_rate)
-    iterations = check_param_is_numeric("iterations", args.iterations)
+    epochs = check_param_is_numeric("epochs", args.iterations)
     batches = check_param_is_numeric("batches", args.batches)
     seed = check_param_is_numeric("seed", args.seed)
 
-    main(combination, learning_rate, iterations, batches, seed)
+    main(combination, learning_rate, epochs, batches, seed)
