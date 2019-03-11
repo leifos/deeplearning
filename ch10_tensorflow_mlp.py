@@ -89,7 +89,7 @@ def main(learning_rate, epochs, batches):
     print("Leaky Relu Network")
     mlp_network(layers, learning_rate, epochs, batches, activation_func=leaky_relu)
 
-    tf.random.set_random_seed(1234)
+    
     print("Elu Network")
     mlp_network(layers, learning_rate, epochs, batches, activation_func=tf.nn.elu)
 
