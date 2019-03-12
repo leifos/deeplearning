@@ -6,7 +6,6 @@ def network_one(learning_rate, epochs, batches):
 
     print("Perceptron Network with One Hidden Layer")
     print("Combination One with learning rate: {} epochs: {} and batch size: {}".format(learning_rate, epochs, batches))
-
     mlp_network(1, learning_rate, epochs, batches, activation_func=heavy_side)
 
 
@@ -20,12 +19,10 @@ def network_three(learning_rate, epochs, batches):
 
     print("Perceptron Network with Two Hidden Layers")
     print("Combination Three with learning rate: {} epochs: {} and batch size: {}".format(learning_rate, epochs, batches))
-
     mlp_network(2, learning_rate, epochs, batches, activation_func=heavy_side)
 
 
 def network_four(learning_rate, epochs, batches):
-
     print("Sigmoid Network with Two Hidden Layer")
     print("Combination Four with learning rate: {} epochs: {} and batch size: {}".format(learning_rate, epochs, batches))
     mlp_network(2, learning_rate, epochs, batches, activation_func=tf.nn.sigmoid)
@@ -43,10 +40,10 @@ def main(combination, learning_rate, epochs, batches, seed):
         network_two(learning_rate, epochs, batches)
 
     if int(combination)==3:
-        network_one(learning_rate, epochs, batches)
+        network_three(learning_rate, epochs, batches)
 
     if int(combination)==4:
-        network_two(learning_rate, epochs, batches)
+        network_four(learning_rate, epochs, batches)
 
     print("Done!")
 

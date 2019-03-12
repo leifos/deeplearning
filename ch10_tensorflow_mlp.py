@@ -89,7 +89,7 @@ def main(learning_rate, epochs, batches):
     print("Leaky Relu Network")
     mlp_network(layers, learning_rate, epochs, batches, activation_func=leaky_relu)
 
-    
+
     print("Elu Network")
     mlp_network(layers, learning_rate, epochs, batches, activation_func=tf.nn.elu)
 
